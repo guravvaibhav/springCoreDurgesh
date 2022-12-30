@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="ans1" class="spring.durgesh.collection.Answer">
+		<property name="aId" value="1" />
+		<property name="answer" value="simple" />
+	</bean>
+	<bean name="ans2" class="spring.durgesh.collection.Answer">
+		<property name="aId" value="2" />
+		<property name="answer" value="roboust" />
+	</bean>
+	<bean name="ans3" class="spring.durgesh.collection.Answer">
+		<property name="aId" value="3" />
+		<property name="answer" value="Platform Independent" />
+	</bean>
+
+	<bean name="que1" class="spring.durgesh.collection.Question">
+		<property name="qId" value="101" />
+		<property name="question"
+			value="what are the features of java ?"></property>
+		<property name="answers">
+			<list>
+				<ref bean="ans1" />
+				<ref bean="ans2" />
+				<ref bean="ans3" />
+			</list>
+		</property>
+		<property name="mob">
+			<set>
+				<value>849484</value>
+				<value>457686</value>
+				<value>12343</value>
+			</set>
+		</property>
+
+		<property name="book_Price">
+			<map>
+				<entry key="abc" value="123"></entry>
+				<entry key="pqr" value="456"></entry>
+				<entry key="xyz" value="789"></entry>
+			</map>
+		</property>
+
+		<property name="bookAuth" ref="abc" />
+
+	</bean>
+	<bean name="abc"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="location"
+			value="classpath:bookAut.properties" />
+	</bean>
+</beans>

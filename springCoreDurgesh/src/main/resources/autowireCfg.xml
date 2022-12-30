@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- <bean name="employee" class="spring.durgesh.autowire.Employee" autowire="byName"> 
+		<property name="empId" value="101"></property> </bean> -->
+	<!-- <bean name="employee" class="spring.durgesh.autowire.Employee" autowire="byType"> 
+		<property name="empId" value="101"></property> </bean> -->
+	<bean name="employee" class="spring.durgesh.autowire.Employee"
+		autowire="constructor">
+		<constructor-arg name="empId" value="101"></constructor-arg>
+	</bean>
+
+	<bean name="add" class="spring.durgesh.autowire.Address">
+		<property name="pin" value="416202"></property>
+		<property name="city" value="kolhapur"></property>
+	</bean>
+
+</beans>

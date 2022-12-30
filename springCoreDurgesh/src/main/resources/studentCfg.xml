@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ <!--   <bean name="student" class="spring.durgesh.scope_lazyInitialisation.Student" scope="singleton" lazy-init="true">
+   <property name="roll" value="10"/>
+   <property name="name" value="vaibhav"/>
+   </bean> -->
+   
+   <bean name="student" class="spring.durgesh.scope_lazyInitialisation.Student" scope="prototype" lazy-init="true">
+   <property name="roll" value="10"/>
+   <property name="name" value="vaibhav"/>
+   </bean>
+
+</beans>
+
