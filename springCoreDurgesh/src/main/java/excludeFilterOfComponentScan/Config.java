@@ -5,8 +5,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.FilterType;
 
 @ComponentScan(excludeFilters = @ComponentScan.Filter(type =FilterType.ASPECTJ,pattern = "excludeFilterOfComponentScan.A"))
-//@ComponentScan(basePackages ="excludeFilterOfComponentScan",
-//includeFilters = @ComponentScan.Filter(type =FilterType.ASPECTJ,pattern = "read_properties.Config"))
+@ComponentScan(basePackages ="excludeFilterOfComponentScan",
+includeFilters = @ComponentScan.Filter(type =FilterType.ASPECTJ,pattern = "read_properties.Config"))
 public class Config {
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext ct=new AnnotationConfigApplicationContext(Config.class);
