@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+	<bean name="d" class="spring.complexBean.MethodInjectio.Dependent" scope="prototype">
+	<property name="i" value="10"></property>
+	</bean>
+
+
+   <bean name="main" class="spring.complexBean.MethodInjectio.Main">
+   <property name="j" value="10"/>
+   <lookup-method name="createDependent" bean="d"/>
+   <property name="d" ref="d"></property>
+   
+   </bean>
+
+</beans>
+

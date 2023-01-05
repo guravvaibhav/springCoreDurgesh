@@ -10,12 +10,12 @@
 		<property name="empId" value="101"></property> </bean> -->
 	<bean name="employee" class="spring.durgesh.autowire.Employee"
 		autowire="constructor">
-		<constructor-arg name="empId" value="101"></constructor-arg>
+		<constructor-arg name="empId" value="101" ></constructor-arg>
 	</bean>
 
 	<bean name="add" class="spring.durgesh.autowire.Address">
 		<property name="pin" value="416202"></property>
-		<property name="city" value="kolhapur"></property>
+		<property name="city" value="kolhapur"  />
 	</bean>
 
 </beans>
