@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component;
 public class Main {
 	public int m(int i) {
 		System.out.println("!!!.. METHOD M EXECUTING..!!!");
-//		System.out.println("square of "+i+" is "+i*i);
 		return i*i;
 	}
 

@@ -7,6 +7,8 @@ import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -34,7 +36,7 @@ public class AspectC {
 	public int log5(ProceedingJoinPoint pjp) throws Throwable {
 		int args =(Integer) pjp.getArgs()[0];
 		System.out.println("method m started by passing parameter : "+args);
-		Integer rt = (Integer)pjp.proceed();
+		int rt =(Integer) pjp.proceed();
 		System.out.println("method m ended by returning value : "+rt);
 		return rt;
 	}
